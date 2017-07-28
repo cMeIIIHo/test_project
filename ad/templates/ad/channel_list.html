@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content%}
+<h1>Channels</h1>
+<ul>
+    {% for channel in object_list %}
+    <li>
+        {{ channel.name }}  :
+        <a href="{% url 'ad:channel_update' channel.id %}">View</a>
+        <a href="{% url 'ad:channel_delete' channel.id %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'ad:channel_create' %}">Create</a>
+{% endblock %}
