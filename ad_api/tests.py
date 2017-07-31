@@ -3,8 +3,6 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from ad.models import Channel, Campaign
 
-# create, read, update, delete
-
 
 class ChannelApiTests(APITestCase):
     def setUp(self):
@@ -53,8 +51,8 @@ class ChannelApiTests(APITestCase):
 class CampaignApiTests(APITestCase):
     def setUp(self):
         channel = Channel.objects.create(name='test_name1',
-                               slug='test_slug1',
-                               bidtypes='a,bc, d, ef')
+                                         slug='test_slug1',
+                                         bidtypes='a,bc, d, ef')
         Campaign.objects.create(name='test_name2',
                                 channel=channel,
                                 bid=3.14,
