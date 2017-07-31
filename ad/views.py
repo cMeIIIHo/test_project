@@ -1,10 +1,7 @@
-
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from ad.models import Channel, Campaign
-
-# Create your views here.
 
 # Channel CBV
 

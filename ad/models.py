@@ -1,8 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 
-# Create your models here.
-
 
 class Channel(models.Model):
     name = models.CharField(max_length=100)

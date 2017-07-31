@@ -1,10 +1,6 @@
 from ad.models import Channel, Campaign
 from ad_api.serializers import ChannelSerializer, CampaignSerializer
 from rest_framework import generics
-from django.http import Http404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
 
 # Channel views
 
