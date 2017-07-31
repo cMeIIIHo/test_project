@@ -6,4 +6,6 @@ django.setup()
 
 from ad.models import *
 
-print(Channel.objects.all())
+
+channel = Channel.objects.get()
+print(channel.id, type(channel.id))
