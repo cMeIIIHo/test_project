@@ -66,7 +66,7 @@ class CampaignApiTests(APITestCase):
         url = reverse('ad_api:campaign_list_api')
         data = {'name': 'test_name4',
                 'channel': Channel.objects.get().id,
-                'bid': '2.2',
+                'bid': 2.2,
                 'bidtype': 'd'}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -85,7 +85,7 @@ class CampaignApiTests(APITestCase):
         url = reverse('ad_api:campaign_detail_api', args=[campaign.id])
         data = {'name': 'test_name4',
                 'channel': Channel.objects.get().id,
-                'bid': '2.2',
+                'bid': 2.2,
                 'bidtype': 'd'}
         response = self.client.put(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -102,7 +102,7 @@ class CampaignApiTests(APITestCase):
         url = reverse('ad_api:campaign_list_api')
         data = {'name': 'test_name4',
                 'channel': Channel.objects.get().id,
-                'bid': '2.2',
+                'bid': 2.2,
                 'bidtype': 'asdasd'}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
